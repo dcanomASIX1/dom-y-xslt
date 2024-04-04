@@ -1,0 +1,34 @@
+# Fes un programa amb python que a partir d'aquest xml construeix un
+# diccionari on a partir dels nom i cognom d'una persona, tinc un llistat de les assignatures.
+#
+# Desprès fes que el programa et demani un assignatura i et digui el nom de les persones que estan matriculades.
+#
+
+
+from xml.dom import minidom
+
+doc = minidom.parse("universitat.xml")
+
+alumnes = doc.getElementsByTagName("persona")
+
+d = {}
+
+for alumna in alumnes:
+    nom_alumna = alumna.getElementsByTagName("nom")[0].firstChild.data
+    cognoms_alumna = alumna.getElementsByTagName("cognoms")[0].firstChild.data
+    assignatures = alumna.getElementsByTagName("assignatura")
+
+    assigList = []
+
+    for assignatura in assignatures:
+        assigList.append(assignatura.firstChild.data)
+
+    d[nom_alumna+" "+cognoms_alumna] = assigList
+
+print ("Assignatures de la persona")
+nom_ = input("Nom --------------- ")
+cognom_ = input("Cognom ---------- ")
+
+print("resultat de la cerca ")
+for assignatura in d[nom_+" "+cognom_]:
+    print (assignatura)
