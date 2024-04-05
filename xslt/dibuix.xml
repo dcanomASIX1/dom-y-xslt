@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="dibuix.xsl"?>
+<dibuix>
+    <canvas>
+        <amplada>400</amplada>
+        <alçada>400</alçada>
+    </canvas>
+    <figures>
+        <figura tipus="rectangle" color="red">
+            <posicio>
+                <x>100</x>
+                <y>20</y>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="rectangle" color="red">
+            <posicio>
+                <x>200</x>
+                <y>120</y>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+        <figura tipus="cercle" color="red">
+            <posicio>
+                <x>200</x>
+                <y>120</y>
+            </posicio>
+            <dimensions>
+                <r>100</r>
+                <cx>300</cx>
+                <cy>100</cy>
+            </dimensions>
+        </figura>
+        <figura tipus="elipse" color="red">
+            <posicio>
+                <x>200</x>
+                <y>120</y>
+            </posicio>
+            <dimensions>
+                <rx>150</rx>
+                <ry>50</ry>
+                <cx>100</cx>
+                <cy>200</cy>
+            </dimensions>
+        </figura>
+        <figura tipus="text" color="blue">
+            <posicio>
+                <x>200</x>
+                <y>200</y>
+            </posicio>
+            <dimensions>
+                <dx>150</dx>
+                <dy>150</dy>
+            </dimensions>
+        </figura>
+    </figures>
+    <borde>
+        <stroke>yellow</stroke>
+        <stroke-width>3</stroke-width>
+    </borde>
+</dibuix>
