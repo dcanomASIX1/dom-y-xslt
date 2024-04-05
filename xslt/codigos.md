@@ -92,4 +92,76 @@
 
 ```
 
+# Sort
+```xslt
 
+<table>
+<tr>
+<th>Title</th>
+<th>Artist</th>
+</tr>
+<xsl:for-each select="catalog/cd">
+<xsl:sort select="artist"/>
+<tr>
+<td><xsl:value-of select="title"/> </td>
+<td><xsl:value-of select="artist"/> </td>
+</tr>
+</xsl:for-each>
+</table>
+
+```
+# IF
+
+```xslt
+
+<table>
+<tr>
+<th>Title</th>
+<th>Artist</th>
+</tr>
+<xsl:for-each select="catalog/cd">
+<xsl:if test="artist='Rod Stewart'"/>
+<tr>
+<td><xsl:value-of select="title"/> </td>
+<td><xsl:value-of select="artist"/> </td>
+</tr>
+</xsl:for-each>
+</table>
+
+```
+
+# Chose
+```xslt
+<tr>
+<td><xsl:value-of select="title"/></td>
+<xsl:choose>
+<xsl:when test="price &gt; 10">
+<td bgcolor="#ff00ff">
+<xsl:value-of select="artist"/></td>
+</xsl:when>
+<xsl:otherwise>
+<td><xsl:value-of select="artist"/></td>
+</xsl:otherwise>
+</xsl:choose>
+
+```
+
+# Links
+```xslt
+<a>
+<xsl:attribute name="href">
+<xsl:value-of select="link"/>
+</xsl:attribute>
+Comprar
+</a>
+
+```
+
+```xslt
+<img>
+<xsl:attribute name="src">
+<xsl:value-of select="ruta imatge" />
+</xsl:attribute>
+</img>
+
+```
